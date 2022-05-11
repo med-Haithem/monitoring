@@ -139,6 +139,7 @@ export default function Home() {
                   const url = item.url
                     .replace("{0}", getUnixTime(dateFrom).toString())
                     .replace("{1}", getUnixTime(dateTo).toString());
+                    window.print(url,"_blank")
                   return (
                     <Grid
                       item
