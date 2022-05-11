@@ -143,7 +143,7 @@ export default function Home() {
                     <Grid
                       item
                       xs={6}
-                      key={item.title}
+                      key={index}
                       direction="row"
                       justifyContent="center"
                       alignItems="center"
@@ -157,18 +157,10 @@ export default function Home() {
                           padding: "0.5em",
                         }}
                       >
-                        <strong>{item.title}</strong>
+                        <a href={url} target="_blank" rel="noreferrer">
+                          <strong>{item.title}</strong>{" "}
+                        </a>
                       </div>
-                      <iframe
-                        style={{
-                          width: "100%",
-                          backgroundColor: "#fff",
-                          height: "75vh",
-                          margin: 0,
-                          padding: 0,
-                        }}
-                        src={url}
-                      />
                     </Grid>
                   );
                 })}
